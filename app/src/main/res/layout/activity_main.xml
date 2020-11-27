@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="228dp"
+        android:layout_height="121dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/ic_magic_megacine_badalona" />
 `
@@ -25,10 +25,33 @@
         android:text="Trivia Magica"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Reglas:" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:text="Si contesta las 5 preguntas correctamente gana un boleto al cine." />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:text="Si falla puede volver a jugar." />
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:onClick="empezar"
         android:text="Empezar" />
 
