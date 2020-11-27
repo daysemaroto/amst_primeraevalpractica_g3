@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "amst_primeraevalpractica_g3"
