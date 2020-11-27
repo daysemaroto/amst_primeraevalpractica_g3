@@ -160,6 +160,7 @@ public class PreguntasActivity extends AppCompatActivity {
             else{
                 //Sorry
                 Intent intent=new Intent(context,perdedor.class);
+                intent.putExtra("errores",errores);
                 startActivity(intent);
             }
 
