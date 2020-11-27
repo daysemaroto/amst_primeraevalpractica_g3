@@ -5,18 +5,18 @@ import java.util.List;
 public class Trivia {
 
     private int id;
-    private String imagen;
+    private int imagen;
     private String pregunta;
     private List<Pregunta> preguntas;
 
-    public Trivia(int id,String imagen, String pregunta, List<Pregunta> preguntas) {
+    public Trivia(int id,int imagen, String pregunta, List<Pregunta> preguntas) {
         this.imagen = imagen;
         this.pregunta = pregunta;
         this.preguntas = preguntas;
         this.id=id;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
 
