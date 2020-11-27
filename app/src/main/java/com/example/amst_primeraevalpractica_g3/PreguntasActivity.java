@@ -156,27 +156,26 @@ public class PreguntasActivity extends AppCompatActivity {
     private void btnClick(boolean correcta){
 
 
-        contestadas++;
+
 
         if(!correcta){
             errores++;
             Toast.makeText(context,"Incorreacta",Toast.LENGTH_SHORT).show();
+            //Sorry
+            Intent intent=new Intent(context,perdedor.class);
+            intent.putExtra("contestadas",contestadas);
+            startActivity(intent);
+            finish();
         }
         else{
             Toast.makeText(context,"Correcta",Toast.LENGTH_SHORT).show();
         }
+        contestadas++;
         if(contestadas>=5){
-            if(errores==0){
-                //QR
+
                 Intent intent=new Intent(context,ganador.class);
                 startActivity(intent);
-            }
-            else{
-                //Sorry
-                Intent intent=new Intent(context,perdedor.class);
-                intent.putExtra("errores",errores);
-                startActivity(intent);
-            }
+                finish();
 
         }
         else {
