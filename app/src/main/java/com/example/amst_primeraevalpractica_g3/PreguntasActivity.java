@@ -160,7 +160,7 @@ public class PreguntasActivity extends AppCompatActivity {
 
         if(!correcta){
             errores++;
-            Toast.makeText(context,"Incorreacta",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Incorrecta",Toast.LENGTH_SHORT).show();
         }
         else{
             Toast.makeText(context,"Correcta",Toast.LENGTH_SHORT).show();
