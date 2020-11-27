@@ -27,9 +27,7 @@ public class perdedor extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras!=null)
         {
-            int j =(int) extras.get("errores");
-            int h =(int) extras.get("contestadas");
-            j=h-j;
+            int j =(int) extras.get("contestadas");
             txt_respondidas.setText("Ha respondido "+Integer.toString(j)+" preguntas");
 
         }
