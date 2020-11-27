@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,32 +9,40 @@
     android:padding="30dp"
     tools:context=".ganador">
 
-    <TextView
-        android:id="@+id/textView6"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Ha ganado una entrada al cine"
-        android:textSize="24sp" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="146dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/ic_feliz" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ha ganado una entrada al cine"
+            android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="317dp"
-        android:layout_height="351dp"
-        app:srcCompat="@drawable/ic_qr_code" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="146dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_feliz" />
 
-    <Button
-        android:id="@+id/btn_salir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="salir"
-        android:text="Salir" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="277dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/ic_qr_code" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_salir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="salir"
+            android:text="Salir" />
+
+    </LinearLayout>
+
+</ScrollView>
