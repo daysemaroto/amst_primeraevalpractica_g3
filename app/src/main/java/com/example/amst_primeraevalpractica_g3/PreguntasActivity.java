@@ -161,6 +161,11 @@ public class PreguntasActivity extends AppCompatActivity {
         if(!correcta){
             errores++;
             Toast.makeText(context,"Incorrecta",Toast.LENGTH_SHORT).show();
+            //Sorry
+            Intent intent=new Intent(context,perdedor.class);
+            intent.putExtra("errores",errores);
+            intent.putExtra("contestadas",contestadas);
+            startActivity(intent);
         }
         else{
             Toast.makeText(context,"Correcta",Toast.LENGTH_SHORT).show();

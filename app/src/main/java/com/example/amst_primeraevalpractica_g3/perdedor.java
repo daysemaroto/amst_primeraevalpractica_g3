@@ -28,7 +28,8 @@ public class perdedor extends AppCompatActivity {
         if(extras!=null)
         {
             int j =(int) extras.get("errores");
-            j=5-j;
+            int h =(int) extras.get("contestadas");
+            j=h-j;
             txt_respondidas.setText("Ha respondido "+Integer.toString(j)+" preguntas");
 
         }
