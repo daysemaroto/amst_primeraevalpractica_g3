@@ -15,13 +15,38 @@
         android:layout_height="wrap_content"
         tools:srcCompat="@tools:sample/avatars" />
 
+
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_pregunta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="TextView"
+        android:text="Pregunta?"
         android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_respuesta1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Respuesta1" />
+    <Button
+        android:id="@+id/btn_respuesta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Respuesta2" />
+    <Button
+        android:id="@+id/btn_respuesta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Respuest3" />
+    <Button
+        android:id="@+id/btn_respuesta4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Respuesta4" />
+
+
 
 
 </LinearLayout>

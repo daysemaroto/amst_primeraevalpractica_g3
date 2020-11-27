@@ -13,4 +13,8 @@ public class Pregunta {
     public boolean isCorrecta() {
         return correcta;
     }
+
+    public String getContenido() {
+        return contenido;
+    }
 }

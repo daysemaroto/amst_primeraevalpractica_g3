@@ -44,11 +44,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:onClick="jugar"
         android:text="Volver a Jugar" />
 
     <Button
         android:id="@+id/btn_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="salir"
         android:text="Salir" />
 </LinearLayout>
