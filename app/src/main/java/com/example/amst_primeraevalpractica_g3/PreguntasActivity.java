@@ -23,6 +23,8 @@ public class PreguntasActivity extends AppCompatActivity {
 
     public Trivia actualTrivia;
 
+    public List<Integer> idContestadas;
+
     public Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class PreguntasActivity extends AppCompatActivity {
         context=getApplicationContext();
         this.errores=0;
         this.contestadas=0;
-
+        idContestadas=new ArrayList<>();
 
         this.trivias = new ArrayList<>();
 
@@ -43,7 +45,7 @@ public class PreguntasActivity extends AppCompatActivity {
         preguntas1.add(new Pregunta("En 1977",true));
         preguntas1.add(new Pregunta("En 1979",false));
 
-        Trivia trivia1=new Trivia("p1.png","¿En qué año se estrenó la primera película de la saga?",preguntas1);
+        Trivia trivia1=new Trivia(1,"p1.png","¿En qué año se estrenó la primera película de la saga?",preguntas1);
 
         this.trivias.add(trivia1);
         ///////////////////////////
@@ -54,7 +56,7 @@ public class PreguntasActivity extends AppCompatActivity {
         preguntas2.add(new Pregunta("Ese nombre ya no significa nada para mí",false));
         preguntas2.add(new Pregunta("No conoces el poder del lado oscuro",false));
 
-        Trivia trivia2=new Trivia("p2.png","¿Cuál es la frase más famosa del personaje de Darth Vader?",preguntas2);
+        Trivia trivia2=new Trivia(2,"p2.png","¿Cuál es la frase más famosa del personaje de Darth Vader?",preguntas2);
 
         this.trivias.add(trivia2);
         ///////////////////////////
@@ -65,7 +67,7 @@ public class PreguntasActivity extends AppCompatActivity {
         preguntas3.add(new Pregunta("Tatooine",false));
         preguntas3.add(new Pregunta("Naboo",false));
 
-        Trivia trivia3=new Trivia("p3.png","¿Cómo se llama el planeta de origen del maestro Yoda?",preguntas3);
+        Trivia trivia3=new Trivia(3,"p3.png","¿Cómo se llama el planeta de origen del maestro Yoda?",preguntas3);
 
         this.trivias.add(trivia3);
 
@@ -77,7 +79,7 @@ public class PreguntasActivity extends AppCompatActivity {
         preguntas4.add(new Pregunta("D-0",false));
         preguntas4.add(new Pregunta("T-800",true));
 
-        Trivia trivia4=new Trivia("p4.png","Uno de estos robots no pertenece a la saga de Star Wars. ¿Cuál?",preguntas4);
+        Trivia trivia4=new Trivia(4,"p4.png","Uno de estos robots no pertenece a la saga de Star Wars. ¿Cuál?",preguntas4);
 
         this.trivias.add(trivia4);
         ///////////////////////////
@@ -89,7 +91,7 @@ public class PreguntasActivity extends AppCompatActivity {
         preguntas5.add(new Pregunta("Los máximos representantes de los Rebeldes",false));
 
 
-        Trivia trivia5=new Trivia("p5.png","¿Quiénes son los Sith?",preguntas5);
+        Trivia trivia5=new Trivia(5,"p5.png","¿Quiénes son los Sith?",preguntas5);
 
         this.trivias.add(trivia5);
         ///////////////////////////
@@ -101,6 +103,10 @@ public class PreguntasActivity extends AppCompatActivity {
     private void loadPregunta(){
         Random rand = new Random();
         actualTrivia= trivias.get(rand.nextInt(trivias.size()));
+        if(idContestadas.contains(actualTrivia.getId())){
+            loadPregunta();
+        }
+        idContestadas.add(actualTrivia.getId());
         loadTriva();
     }
 
