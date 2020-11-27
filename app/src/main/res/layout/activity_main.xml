@@ -16,7 +16,7 @@
         android:layout_height="228dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/ic_magic_megacine_badalona" />
-
+`
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

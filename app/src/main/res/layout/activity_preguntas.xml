@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,44 +9,55 @@
     android:paddingEnd="16dp"
     tools:context=".PreguntasActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:orientation="vertical">
 
 
-
-    <TextView
-        android:id="@+id/text_pregunta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Pregunta?"
-        android:gravity="center_horizontal" />
-
-    <Button
-        android:id="@+id/btn_respuesta1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Respuesta1" />
-    <Button
-        android:id="@+id/btn_respuesta2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Respuesta2" />
-    <Button
-        android:id="@+id/btn_respuesta3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Respuest3" />
-    <Button
-        android:id="@+id/btn_respuesta4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Respuesta4" />
+        <ImageView
+            android:id="@+id/trivia_imagen"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars" />
 
 
+        <TextView
+            android:id="@+id/text_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Pregunta?"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_respuesta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Respuesta1" />
+
+        <Button
+            android:id="@+id/btn_respuesta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Respuesta2" />
+
+        <Button
+            android:id="@+id/btn_respuesta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Respuest3" />
+
+        <Button
+            android:id="@+id/btn_respuesta4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Respuesta4" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
